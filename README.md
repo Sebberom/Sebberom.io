@@ -1,82 +1,46 @@
-# Background Étoilé Animé - Guide d'utilisation
+# 🚀 Mon Portfolio - Work in Progress
 
-## 📋 Structure des fichiers
+> ⚠️ **STATUS**: Ce projet est actuellement en développement (**WIP**). Les fonctionnalités et le design sont sujets à changer.
 
-- `background-stars.css` - Fichier CSS du background étoilé (réutilisable)
-- `star.css` - Styles du portfolio (importe background-stars.css)
-- `index.php` - Page du portfolio
-- `example-other-page.html` - Exemple d'utilisation sur une autre page
+## 📝 À propos
 
-## 🎯 Comment utiliser le background sur une autre page
+Bienvenue sur mon portfolio ! Ce projet met en avant mes compétences et projets en développement web et logiciel.
 
-### Option 1: Utiliser directement le CSS du background
+## 🎨 Caractéristiques
 
-Importez le fichier `background-stars.css` dans votre page:
+- **Design moderne** : Interface épurée avec background animé d'étoiles
+- **Responsive** : Optimisé pour tous les appareils
+- **Carousel interactif** : Galerie de projets avec navigation fluide
+- **Navigation intuitive** : Accès facile à différentes sections
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Ma Page</title>
-    <link href="background-stars.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body>
-    <!-- Ajoutez les divs pour les étoiles -->
-    <div class="stars"></div>
-    <div class="stars2"></div>
-    <div class="stars3"></div>
+## 📁 Structure du projet
 
-    <!-- Votre contenu avec z-index >= 10 -->
-    <div style="position: relative; z-index: 10;">Votre contenu ici...</div>
-  </body>
-</html>
+```
+.
+├── index.php                 # Page principale du portfolio
+├── background.html           # Page d'exemple avec background
+├── style.css                 # Styles principaux
+├── background-stars.css      # Animations du background étoilé
+├── carousel.js               # Logique du carousel
+├── example-other-page.html   # Exemple de page avec background
+└── README.md                 # Ce fichier
 ```
 
-### Option 2: Importer dans votre propre CSS
+## 🛠️ Technologie utilisée
 
-Si vous avez votre propre fichier CSS:
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: PHP
+- **Design**: CSS3 (animations, dégradés, flexbox)
 
-```css
-@import url("background-stars.css");
+## 🚧 À venir
 
-/* Votre CSS personnalisé */
-body {
-  font-family: "Your Font", sans-serif;
-}
+- [ ] Intégration de plus de projets
+- [ ] Section "À propos" améliorée
+- [ ] Formulaire de contact
+- [ ] Optimisation SEO
+- [ ] Dark mode
+- [ ] Animations supplémentaires
 
-.your-content {
-  position: relative;
-  z-index: 10;
-  /* ... */
-}
-```
+## 📌 Notes de développement
 
-## ⚠️ Points importants
-
-1. **Classes CSS**: Utilisez les classes `.stars`, `.stars2`, `.stars3` (pas les IDs)
-2. **Z-index**: Assurez-vous que votre contenu a un `z-index` >= 10 pour être au-dessus du background
-3. **Position**: Le contenu doit avoir `position: relative` ou `position: absolute` si vous utilisez `z-index`
-4. **Pointeur**: Le background a `pointer-events: none`, donc il n'interfère pas avec les clics
-
-## 🎨 Personnalisation
-
-Pour modifier les couleurs ou vitesses d'animation, éditez `background-stars.css`:
-
-- Vitesses d'animation (lignes avec `animation`):
-
-  - `.stars`: 50s
-  - `.stars2`: 100s
-  - `.stars3`: 150s
-
-- Couleur de fond (ligne 5):
-  ```css
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  ```
-
-## ✅ Vérification
-
-- Le background est fixe et ne scroll pas
-- Les étoiles animées descent continuellement
-- Le contenu reste lisible au-dessus du background
-- Fonctionne sur tous les navigateurs modernes
+Ce portfolio est actuellement en construction. Les changements peuvent survenir régulièrement.
