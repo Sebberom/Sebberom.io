@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mon Portfolio</title>
+  <title>Sebbe Romain</title>
+   <link rel="icon" type="image/x-icon" href="images/icon.ico">
   <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   <link href='style.css' rel='stylesheet' type='text/css'>
   <!-- Étoiles animées -->
@@ -12,14 +13,22 @@
   <div class="stars3"></div>
 </head>
 <body>
+  <!-- Bouton retour vers le haut -->
+  <a href="#" id="scroll-to-top" class="scroll-to-top">
+    <img src="images/icon.png" alt="Retour vers le haut">
+  </a>
+
+  <!-- Bouton pause animation -->
+  <button id="pause-animation" class="pause-animation" title="Pause animation">⏸</button>
+
   <div id="portfolio-container">
     <div id="portfolio-image">
       <img src="profile.jpg" alt="Profile Picture">
     </div>
     <div id="portfolio-content">
       <h1>SEBBE Romain</h1>
-      <p class="subtitle">Développeur Web Créatif</p>
-      <p class="biography">Bienvenue sur mon portfolio! Je suis un développeur passionné par la création d'expériences web innovantes et interactives. Avec une expertise en HTML, CSS et JavaScript, je m'efforce de transformer les idées en réalité digitale.</p>
+      <p class="subtitle">Développeur Web / Game Programmer</p>
+      <p class="biography">Bienvenue sur mon portfolio! Je suis un développeur passionné par la création d'expériences web innovantes et interactives. Avec une expertise en HTML, CSS et JavaScript, je m'efforce de transformer les idées en réalité numérique.</p>
       <p class="biography">Parcourez ma sélection de projets pour découvrir mon travail et n'hésitez pas à me contacter pour toute collaboration.</p>
     </div>
   </div>
@@ -39,5 +48,28 @@
   </section>
 
   <script src="carousel.js"></script>
+  <script>
+    // Scroll smooth vers le haut
+    document.getElementById('scroll-to-top').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Pause/Play animation arrière-plan
+    const pauseBtn = document.getElementById('pause-animation');
+    let isAnimationPaused = false;
+    const stars = document.querySelectorAll('.stars, .stars2, .stars3');
+
+    pauseBtn.addEventListener('click', function() {
+      isAnimationPaused = !isAnimationPaused;
+      stars.forEach(star => {
+        star.style.animationPlayState = isAnimationPaused ? 'paused' : 'running';
+      });
+      pauseBtn.textContent = isAnimationPaused ? '▶' : '⏸';
+    });
+  </script>
 </body>
 </html>

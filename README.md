@@ -17,7 +17,7 @@ Bienvenue sur mon portfolio ! Ce projet met en avant mes compétences et projets
 
 ```
 .
-├── index.php                 # Page principale du portfolio
+├── index.html                 # Page principale du portfolio
 ├── background.html           # Page d'exemple avec background
 ├── style.css                 # Styles principaux
 ├── background-stars.css      # Animations du background étoilé
