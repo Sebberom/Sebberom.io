@@ -37,9 +37,8 @@ Bienvenue sur mon portfolio ! Ce projet met en avant mes compétences et projets
 - [ ] Intégration de plus de projets
 - [ ] Section "À propos" améliorée
 - [ ] Formulaire de contact
-- [ ] Optimisation SEO
-- [ ] Dark mode
-- [ ] Animations supplémentaires
+- [ ] Gestion dynamique du scroll
+- [ ] Intégration de A-Frame ou ThreeJS pour mes réalisations 3D
 
 ## 📌 Notes de développement
 
