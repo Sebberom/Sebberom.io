@@ -58,16 +58,22 @@
       });
     });
 
-    // Pause/Play animation arrière-plan
+    // Pause/Play toutes les animations arrière-plan
     const pauseBtn = document.getElementById('pause-animation');
     let isAnimationPaused = false;
-    const stars = document.querySelectorAll('.stars, .stars2, .stars3');
 
     pauseBtn.addEventListener('click', function() {
       isAnimationPaused = !isAnimationPaused;
-      stars.forEach(star => {
-        star.style.animationPlayState = isAnimationPaused ? 'paused' : 'running';
+      
+      // Mettre en pause/reprendre toutes les animations CSS de la page
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(element => {
+        const computedStyle = window.getComputedStyle(element);
+        if (computedStyle.animationName !== 'none') {
+          element.style.animationPlayState = isAnimationPaused ? 'paused' : 'running';
+        }
       });
+      
       pauseBtn.textContent = isAnimationPaused ? '▶' : '⏸';
     });
   </script>
